@@ -1,0 +1,16 @@
+trace,policy,cap,num_read_reqs_0,avg_read_latency_0,row_hits_0,row_misses_0,row_conflicts_0,read_row_nonhits_0,memory_access_cycles_recorded_core_0,cycles_recorded_core_0,num_close_reqs
+example_inst,Open,-,6,46.5,2,4,0,4,61,216815,
+example_inst,Closed,1,6,67.3333359,0,6,0,6,147,217044,6
+example_inst,Closed,2,6,51.6666679,1,5,0,5,92,216897,1
+example_inst,Closed,4,6,46.5,2,4,0,4,61,216815,0
+example_inst,Closed,8,6,46.5,2,4,0,4,61,216815,0
+example_rh_physaddr,Open,-,72,68.0694427,0,28,44,72,447,501094,
+example_rh_physaddr,Closed,1,72,104.638885,0,72,0,72,604,501513,72
+example_rh_physaddr,Closed,2,72,68.0694427,0,28,44,72,447,501094,0
+example_rh_physaddr,Closed,4,72,68.0694427,0,28,44,72,447,501094,0
+example_rh_physaddr,Closed,8,72,68.0694427,0,28,44,72,447,501094,0
+example_prac_attacker,Open,-,1152,67.9270859,120,28,1004,1032,6166,515265,
+example_prac_attacker,Closed,1,1152,111.641495,0,1152,0,1152,9346,523745,1152
+example_prac_attacker,Closed,2,1152,70.7838516,64,84,1004,1088,6363,515790,64
+example_prac_attacker,Closed,4,1152,69.1137161,96,52,1004,1056,6255,515502,32
+example_prac_attacker,Closed,8,1152,68.4609375,112,36,1004,1040,6208,515377,16

@@ -1,0 +1,6 @@
+policy,cap,avg_read_latency_0,row_hits_0,row_misses_0,row_conflicts_0,memory_access_cycles_recorded_core_0,cycles_recorded_core_0,num_close_reqs
+Open,-,46.5,2,4,0,61,216815,
+Closed,1,67.3333359,0,6,0,147,217044,6
+Closed,2,51.6666679,1,5,0,92,216897,1
+Closed,4,46.5,2,4,0,61,216815,0
+Closed,8,46.5,2,4,0,61,216815,0

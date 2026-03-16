@@ -28,6 +28,7 @@ class GenericDRAMController final : public IDRAMController, public Implementatio
     size_t s_write_row_hits = 0;
     size_t s_write_row_misses = 0;
     size_t s_write_row_conflicts = 0;
+    size_t s_read_row_nonhits = 0; // 추가
 
     size_t m_num_cores = 0;
     std::vector<size_t> s_read_row_hits_per_core;
@@ -84,6 +85,7 @@ class GenericDRAMController final : public IDRAMController, public Implementatio
       register_stat(s_read_row_hits).name("read_row_hits_{}", m_channel_id);
       register_stat(s_read_row_misses).name("read_row_misses_{}", m_channel_id);
       register_stat(s_read_row_conflicts).name("read_row_conflicts_{}", m_channel_id);
+      register_stat(s_read_row_nonhits).name("read_row_nonhits_{}", m_channel_id); // 추가
       register_stat(s_write_row_hits).name("write_row_hits_{}", m_channel_id);
       register_stat(s_write_row_misses).name("write_row_misses_{}", m_channel_id);
       register_stat(s_write_row_conflicts).name("write_row_conflicts_{}", m_channel_id);
@@ -264,11 +266,13 @@ class GenericDRAMController final : public IDRAMController, public Implementatio
         } else if (is_row_open(req)) {
           s_read_row_conflicts++;
           s_row_conflicts++;
+          s_read_row_nonhits++; // 추가
           if (req->source_id != -1)
             s_read_row_conflicts_per_core[req->source_id]++;
         } else {
           s_read_row_misses++;
           s_row_misses++;
+          s_read_row_nonhits++; // 추가
           if (req->source_id != -1)
             s_read_row_misses_per_core[req->source_id]++;
         } 
