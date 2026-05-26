@@ -35,6 +35,7 @@ target_sources(
   impl/plugin/rrs.cpp
   impl/plugin/aqua.cpp
   impl/plugin/rfm_manager.cpp
+  impl/plugin/act_counter_stats.cpp
 
   impl/plugin/blockhammer/blockhammer_throttler.h 
   impl/plugin/blockhammer/blockhammer_util.h 
